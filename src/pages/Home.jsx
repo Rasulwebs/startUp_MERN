@@ -10,6 +10,7 @@ const Home = () => {
         <section>
           <div className="container">
             <h2>Home Page</h2>
+            <p>this is home</p>
           </div>
         </section>
       </Layout>
