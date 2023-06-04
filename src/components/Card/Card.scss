@@ -1,0 +1,102 @@
+.card{
+    width: 327.33px;
+    overflow: hidden;
+    background: rgba(39, 46, 55, 1);
+    border-radius: 4px 4px 0px 0px;
+
+    &_img{
+        width: 100%;
+    }
+    &_body{
+        padding: 0 16px 16px 16px;
+        &_title{
+                justify-content: space-between;
+                display: flex;
+                align-items: center !important;
+                margin-top: 14px;
+            h3{
+                font-family: Oxygen;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: rgba(255, 255, 255, 1);
+            }
+            p{
+                font-family: Oxygen;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: rgba(255, 255, 255, 1);
+                margin-top: 10px;
+            }
+        }
+        &_text{
+            font-family: Oxygen;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: rgba(206, 206, 208, 1);
+            
+        }
+        &_btns{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_right{
+                display: flex;
+                gap: 10px;
+                width: 50%;
+                flex-wrap: wrap;
+                img{
+                    width: 19px;
+                    height: 18px;
+                }
+            }
+            &_left{
+                display: flex;
+                gap: 10px;
+                width: 50%;
+                justify-content: end;
+
+                span{
+                    border: 1px solid rgba(5, 150, 105, 0.25);
+                    background: transparent;
+                   border-radius: 4px;
+                   padding: 9px 13px 9px 13px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   height: 32px;
+                   cursor: pointer;
+                }
+
+                &-get{
+                    height: 32px;
+                    display: flex;
+                    color: white;
+                    border-radius: 4px;
+                    padding: 0px 9px 0px 13px;
+                    align-items: center;
+                    justify-content: center;
+                    background: linear-gradient(0deg, rgba(5, 150, 105, 0.25), rgba(5, 150, 105, 0.25)),
+                    linear-gradient(0deg, rgba(34, 34, 34, 0.1), rgba(34, 34, 34, 0.1));
+                    cursor: pointer;
+                    p{
+                        padding-top: 14px;
+                    }
+                    img{
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
