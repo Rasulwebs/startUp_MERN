@@ -27,6 +27,19 @@
         margin-top: 12px;
     }
 }
+.links{
+    display: flex;
+    gap: 20px;
+
+
+    a{
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+}
 .checkedBoxes{
     display: flex;
     justify-content: space-between;

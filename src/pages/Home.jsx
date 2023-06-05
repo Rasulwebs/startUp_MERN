@@ -12,6 +12,7 @@ import link5 from "../assets/images/Frame.png";
 import Register from "../auth/Regsiter/Register";
 import Login from "../auth/Login/Login";
 import { Link } from "react-router-dom";
+import Update from "../auth/Update/Update";
 const Home = () => {
   return (
     <>
@@ -25,6 +26,15 @@ const Home = () => {
                 hundreds of themes, starters, and tools for static site
                 generators submitted by the community.
               </p>
+            </div>
+
+            <div className="links">
+              <Link to="register">
+                <a href="#">Register</a>
+              </Link>{" "}
+              <Link to="login">
+                <a href="#">Login</a>
+              </Link>
             </div>
             <div className="checkedBoxes">
               <div className="checkedBoxes_right">
@@ -183,10 +193,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        
       </Layout>
-      
     </>
   );
 };

@@ -1,0 +1,30 @@
+.update{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+input{
+    width: 100%;
+    padding: 14px 13px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid rgba(57, 72, 82, 1);
+    color: white;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.update-container{
+    width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1E1E1E;
+      height: 100vh;
+}
+.update{
+    width:25%;
+}
