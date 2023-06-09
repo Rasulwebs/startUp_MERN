@@ -76,3 +76,30 @@
         width: 47%;
     }
 }
+@media (max-width:782px) {
+    .product-add{
+        height: 130vh;
+    }
+    .ProNameCategory {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+
+        .form-group {
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+    .ProPricePhone {
+        display: flex;
+        // justify-content: space-between;
+        flex-direction: column;
+
+        .form-group {
+            width: 100%;
+        }
+    }
+}
