@@ -1,0 +1,78 @@
+.product-add{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1E1E1E;
+        height: 100vh;
+        color: white !important;
+}
+.product-add-page {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+
+            label {
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+
+            input,
+            textarea {
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 0.25rem;
+                font-size: 1rem;
+                background: transparent;
+                color: white;
+            }
+
+            input[type='checkbox'] {
+                margin-right: 0.5rem;
+            }
+        }
+
+        button[type='submit'] {
+            padding: 0.5rem;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #388e3c;
+            }
+        }
+    }
+}
+.ProNameCategory{
+    display: flex;
+    justify-content: space-between;
+
+    .form-group{
+        width: 47%;
+    }
+    input{
+        width: 100%;
+    }
+}
+.ProPricePhone{
+    display: flex;
+    justify-content: space-between;
+
+    .form-group{
+        width: 47%;
+    }
+}
