@@ -1,0 +1,47 @@
+.header {
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  background-color: aliceblue;
+  z-index: 10;
+  background: #20262e;
+  border-bottom: 1px solid #394852;
+}
+.navbar-toggler {
+  display: none;
+}
+.techFilterMenuWrapp {
+  display: none;
+}
+.linksMenuWrapp {
+  background: #272e37;
+}
+.searchInputModal {
+  border: 1px solid rgba(57, 72, 82, 1);
+  color: white !important;
+  &::placeholder {
+    color: grey !important;
+  }
+}
+
+.openMenuIconBtn {
+  border: 1px solid rgba(57, 72, 82, 1);
+  outline: none !important;
+  --bs-btn-box-shadow: none !important;
+  box-shadow: none !important;
+  &:hover {
+    border: 1px solid rgba(57, 72, 82, 1);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .headerLinksWrapp {
+    display: none !important;
+  }
+  .techFilterMenuWrapp {
+    display: block;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+}

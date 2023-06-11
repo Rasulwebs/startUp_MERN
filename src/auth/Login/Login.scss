@@ -1,43 +1,44 @@
 .log-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e1e;
+  height: 100vh;
+
+  &_login {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #1E1E1E;
-    height: 100vh;
-    
+    flex-direction: column;
+    max-width:500px;
+    width:100%;
 
-    &_login {
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-        // margin: 250px;
-
-        input {
-            width: 100%;
-            padding: 14px 13px;
-            margin-top: 10px;
-            border-radius: 4px;
-            background: transparent;
-            border: 1px solid rgba(57, 72, 82, 1);
-            color: white;
-        }
-        a{
-            color: white;
-            margin-top: 3px;
-            text-decoration: underline;
-        }
-        button {
-            width: 100%;
-            padding: 14px 13px;
-            margin-top: 10px;
-            border-radius: 4px;
-            background: rgba(5, 150, 105, 0.25);
-            border: 1px solid rgba(57, 72, 82, 1);
-            color: white;
-        }
+    input {
+      width: 100%;
+      padding: 14px 13px;
+      margin-top: 10px;
+      border-radius: 4px;
+      background: transparent;
+      border: 1px solid rgba(57, 72, 82, 1);
+      color: white !important;
+      &::placeholder {
+        color: grey !important;
+      }
     }
+    a {
+      color: rgb(121, 235, 255);
+      text-decoration: underline;
+    }
+    button {
+      width: 100%;
+      padding: 14px 13px;
+      margin-top: 10px;
+      border-radius: 4px;
+      background: rgba(5, 150, 105, 0.25);
+      border: 1px solid rgba(57, 72, 82, 1);
+      color: white;
+    }
+  }
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }

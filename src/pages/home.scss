@@ -1,135 +1,147 @@
-.home {
-    background: #1E1E1E;
-    padding: 0 32px 0px 48px;
+
+.containerHomePage {
+  // max-width: 80%;
+  // width: 100%;
+  padding: 0 22px 0px 22px;
+  min-height: 100vh;
 }
-
-.hero{
-    &_title{
-        font-family: Oxygen;
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 38px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: rgba(255, 255, 255, 1);
-
-    }
-    &_text{
-        font-family: Oxygen;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 26px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: rgba(203, 203, 203, 1);
-        max-width: 690px;
-        width: 100%;
-        margin-top: 12px;
-    }
-}
-.checkedBoxes{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 64px;
-
-    &_right{
-        display: flex;
-            gap: 20px;
-            // background-color: blue;
-            flex-wrap: wrap;
-            width: 85%;
-        &-box{
-            display: flex;
-            color: white;
-            gap: 10px;
-            border: 1px solid rgba(57, 72, 82, 1);
-            border-radius: 4px;
-            padding: 4px 13px;
-            height: 36px;
-            p{
-                font-family: Oxygen;
-                font-size: 13px;
-                font-weight: 400;
-                line-height: 21px;
-                letter-spacing: 0em;
-                text-align: left;
-
-            }
-            span{
-                background: #323940;
-                border-radius: 4px;
-                font-family: Oxygen;
-                font-size: 12px;
-                font-weight: 400;
-                line-height: 16px;
-                letter-spacing: 0em;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                padding: 0 5px;
-            }
-        }
-    }
-    &_left{
-        display: flex;
-        color: white;
-        justify-content: center;
-        gap: 10px;
-        p{
-            font-family: Oxygen;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 21px;
-            letter-spacing: 0em;
-            text-align: left;
-            color: rgba(203, 203, 203, 1);
-            padding-top: 7px;
-            width: 46px;
-        }
-select{
-    border: 1px solid rgba(57, 72, 82, 1);
-    background: transparent;
-    border-radius: 4px;
-    color: white;
+.hero {
+  &_title {
     font-family: Oxygen;
-    font-size: 13px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+  }
+  &_text {
+    font-family: Oxygen;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 21px;
-    padding: 4px 13px;
-    height: 36px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(203, 203, 203, 1);
+    max-width: 690px;
+    width: 100%;
+    margin-top: 12px;
+  }
 }
-    }
-}
-select:focus{
-    outline: none;
-}
-.cards{
+.checkedBoxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+
+  &_right {
     display: flex;
+    gap: 20px;
+    // background-color: blue;
     flex-wrap: wrap;
-    gap: 24px;
-    margin-top: 64px;
-}
-
-
-.forRegister{
-    background: #1E1E1E;
-    padding: 0 32px 0px 48px;
-    margin-top: 64px;
-}
-@media (max-width:782px){
-    .cards {
-        justify-content: center;
+    width: 85%;
+    &-box {
+      display: flex;
+      color: white;
+      gap: 10px;
+      border: 1px solid rgba(57, 72, 82, 1);
+      border-radius: 4px;
+      padding: 4px 13px;
+      height: 36px;
+      p {
+        font-family: Oxygen;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      span {
+        background: #323940;
+        border-radius: 4px;
+        font-family: Oxygen;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+      }
     }
+  }
+  &_left {
+    display: flex;
+    color: white;
+    justify-content: center;
+    gap: 10px;
+    p {
+      font-family: Oxygen;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: rgba(203, 203, 203, 1);
+      padding-top: 7px;
+      width: 46px;
+    }
+    select {
+      border: 1px solid rgba(57, 72, 82, 1);
+      background: transparent;
+      border-radius: 4px;
+      color: white;
+      font-family: Oxygen;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 21px;
+      padding: 4px 13px;
+      height: 36px;
+    }
+  }
 }
-@media (max-width:592px){
-    .checkedBoxes{
+select:focus {
+  outline: none;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 64px;
+}
+.searchInputHome {
+  border: 1px solid rgba(57, 72, 82, 1);
+  color: white !important;
+  &::placeholder {
+    color: grey !important;
+  }
+}
+
+.forRegister {
+  background: #1e1e1e;
+  padding: 0 32px 0px 48px;
+  margin-top: 64px;
+}
+@media (max-width: 782px) {
+  .cards {
+    justify-content: center;
+  }
+}
+@media (max-width: 592px) {
+  .checkedBoxes {
     flex-direction: column;
 
-    &_left{
-        justify-content: flex-start;
-        margin-top: 20px;
+    &_left {
+      justify-content: flex-start;
+      margin-top: 20px;
     }
-    }.cards{
-       justify-content: center;
-    }
+  }
+  .cards {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home .sidebarWrapp {
+    display: none;
+  }
 }

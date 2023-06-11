@@ -13,10 +13,12 @@
     "axios": "^1.4.0",
     "helmet": "^7.0.0",
     "react": "^18.2.0",
+    "react-auth-code-input": "^3.2.1",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.11.2",
+    "react-verification-input": "^3.3.0",
     "sass": "^1.62.1"
   },
   "devDependencies": {

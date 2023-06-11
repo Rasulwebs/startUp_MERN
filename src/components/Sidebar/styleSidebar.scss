@@ -1,0 +1,19 @@
+.sidebarWrapp {
+  // max-width:20% ;
+  // width: 100%;
+  height: 100% !important;
+  position: sticky !important;
+  top: 70px;
+  left: 0;
+}
+.accordion {
+  border: none !important;
+  --bs-accordion-border-color: none !important;
+  outline: none !important;
+  --bs-accordion-btn-focus-border-color: none !important;
+  --bs-accordion-btn-focus-box-shadow: none !important;
+  color: #fff !important;
+  --bs-accordion-active-color:#fff !important;
+  --bs-accordion-color:#fff !important;
+  --bs-accordion-btn-color:#fff !important;
+}
