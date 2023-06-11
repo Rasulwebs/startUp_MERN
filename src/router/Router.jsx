@@ -3,8 +3,11 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Login from "../auth/Login/Login";
 import Register from "../auth/Regsiter/Register";
+import ForgotPassword from "../auth/Update/ForgotPassword";
+import ProductAddPage from "../components/addProdeuct/AddProdeuct.jsx";
 import Home from "../pages/Home";
 import ConfirmationCode from "../auth/ConfirmationCode/ConfirmationCode";
+import ConfirmNewPassword from "../auth/Update/ConfirmNewPassword";
 
 const Router = () => {
   return (
@@ -14,6 +17,9 @@ const Router = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/confirm-auth" element={<ConfirmationCode />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/create-product" element={<ProductAddPage />} />
+        <Route path="/confitrm-new-password" element={<ConfirmNewPassword />} />
       </Routes>
     </>
   );

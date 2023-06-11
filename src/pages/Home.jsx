@@ -13,13 +13,13 @@ import Register from "../auth/Regsiter/Register";
 import Login from "../auth/Login/Login";
 import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar/Sidebar";
+import Update from "../auth/Update/ForgotPassword";
 const Home = () => {
   return (
     <>
       <Layout title={"Home Page"}>
         <section className="home row">
           <div className="col-lg-3 col-md-3 col-sm-12 sidebarWrapp">
-       
             <Sidebar />
           </div>
           <div className="containerHomePage col-lg-9 col-md-9 col-sm-12">
@@ -39,11 +39,23 @@ const Home = () => {
                     placeholder="Enter name Site"
                     aria-label="Search"
                   />
-                  <button className="btn btn-outline-primary w-25" type="submit">
+                  <button
+                    className="btn btn-outline-primary w-25 py-2"
+                    type="submit"
+                  >
                     Search
                   </button>
                 </form>
               </div>
+            </div>
+
+            <div className="links">
+              <Link to="register">
+                <a href="#">Register</a>
+              </Link>{" "}
+              <Link to="login">
+                <a href="#">Login</a>
+              </Link>
             </div>
             <div className="checkedBoxes">
               <div className="checkedBoxes_right">
