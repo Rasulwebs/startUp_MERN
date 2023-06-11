@@ -183,13 +183,14 @@ function ProductAddPage() {
                 />
               </div>
             </div>
-            <button type="submit" className="mt-5">Save</button>
+            <button type="submit" className="mt-5">
+              Save
+            </button>
           </form>
         </div>
       </div>
     </section>
   );
 }
-
 
 export default ProductAddPage;
