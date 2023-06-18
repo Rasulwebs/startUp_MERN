@@ -1,5 +1,6 @@
-import React from 'react';
-import "./input.scss"
+import React from "react";
+import "./input.scss";
+
 const Input = ({ type, placeholder, className }) => {
   return (
     <>

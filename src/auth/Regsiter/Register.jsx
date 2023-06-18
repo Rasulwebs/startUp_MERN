@@ -3,8 +3,8 @@ import "./Register.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import axios from "axios";
-
 import "./Register.scss";
+
 const Register = () => {
   const [loading, setLoading] = useState(true);
   const [email, setEamil] = useState("");
@@ -38,6 +38,7 @@ const Register = () => {
         });
     }
   };
+
   const handleChange = async () => {
     const { data } = await axios.post(
       `https://startup01.onrender.com/api/users`,
@@ -50,6 +51,7 @@ const Register = () => {
     localStorage.setItem("portfolioLink", JSON.stringify(portfolioLink));
     console.log(data);
   };
+
   return (
     <>
       <Layout title={"Register Page"}>
@@ -103,14 +105,12 @@ const Register = () => {
                 setPortfolioLink(e.target.value);
               }}
             />
-
             <button
               className="registerBtn mt-3 btn btn-success"
               onClick={() => {
                 handleChange();
                 navigate("/confirm-auth");
-              }}
-            >
+              }}>
               SEND
             </button>
             <span className="mt-2 mb-3 text-center text-info">
