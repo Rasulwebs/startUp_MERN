@@ -2,7 +2,6 @@ import React from "react";
 import "./Login.scss";
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
-import Input from "../../components/Input/Input";
 import "./Login.scss";
 const Login = () => {
   return (

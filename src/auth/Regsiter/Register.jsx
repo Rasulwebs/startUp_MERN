@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
 import "./Register.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import axios from "axios";
-
+import context from "../../context/context"
+import Input from "../../components/Input/Input"
 import "./Register.scss";
+import { API } from "../../API/API";
 const Register = () => {
+  const { register, setRegister } = useContext(context);
   const [loading, setLoading] = useState(true);
   const [email, setEamil] = useState("");
   const [username, setUserName] = useState("");
@@ -17,7 +20,7 @@ const Register = () => {
 
   const postDetails = (pics) => {
     setLoading(true);
-    if (pics.type === "image/jpeg" || pics.type === "image/png") {
+    if (pics.type === "images/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
       data.append("upload_preset", "chat-app");
@@ -38,24 +41,57 @@ const Register = () => {
         });
     }
   };
-  const handleChange = async () => {
-    const { data } = await axios.post(
-      `https://startup01.onrender.com/api/users`,
-      { username, email, password, imageLink, portfolioLink }
-    );
-    localStorage.setItem("username", JSON.stringify(username));
-    localStorage.setItem("email", JSON.stringify(email));
-    localStorage.setItem("password", JSON.stringify(password));
-    localStorage.setItem("imageLink", JSON.stringify(imageLink));
-    localStorage.setItem("portfolioLink", JSON.stringify(portfolioLink));
-    console.log(data);
-  };
+
+  async function handlerSubmit(e) {
+    e.preventDefault();
+    let formData = {
+      username,
+      email,
+      password,
+      portfolioLink,
+      imageLink,
+    };
+    // console.log(formData);
+    setRegister({ ...formData });
+    let { success, confirmationCode } = await API.postData(formData);
+    // console.log(register);
+    console.log(confirmationCode);
+    console.log(success);
+    if (success) {
+      navigate("/confirm-auth");
+    }
+  }
+  // const handleChange = async () => {
+  //   const { data } = await axios.post(
+  //     `https://startup01.onrender.com/api/users`,
+  //     { username, email, password, imageLink, portfolioLink }
+  //   );
+  //   localStorage.setItem("username", JSON.stringify(username));
+  //   localStorage.setItem("email", JSON.stringify(email));
+  //   localStorage.setItem("password", JSON.stringify(password));
+  //   localStorage.setItem("imageLink", JSON.stringify(imageLink));
+  //   localStorage.setItem("portfolioLink", JSON.stringify(portfolioLink));
+  //   console.log(data);
+  //   setRegister({ ...data });
+  //   let { success, confirmationCode } = await API.postData(register)
+  //   if (success) {
+  //     navigate("/")
+  //   }
+  // };
   return (
     <>
       <Layout title={"Register Page"}>
-        <div className="reg-container">
-          <div className="reg-container_register">
-            <h2 className="text-center text-white">REGISTER</h2>
+        <div className="reg-container_register">
+          <h2 className="text-center text-white">REGISTER</h2>
+          <form action="#" onSubmit={handlerSubmit}>
+            {/* <Input
+              type="file"
+              className="form-control bg-transparent"
+              accept="image/*"
+              onChange={(e) => {
+                postDetails(e.target.files[0]);
+              }}
+            /> */}
             <input
               className="form-control bg-transparent"
               type="file"
@@ -64,6 +100,12 @@ const Register = () => {
                 postDetails(e.target.files[0]);
               }}
             />
+            {/* <Input
+              type="text"
+              className="form-control bg-transparent"
+              placeholder="Enter you name"
+              setValue={setUserName}
+            /> */}
             <input
               className="form-control bg-transparent"
               type="text"
@@ -74,6 +116,12 @@ const Register = () => {
                 setUserName(e.target.value);
               }}
             />
+            {/* <Input
+              type="email"
+              className="form-control bg-transparent"
+              placeholder="Enter you email"
+              setValue={setEamil}
+            /> */}
             <input
               className="form-control bg-transparent"
               type="email"
@@ -84,6 +132,12 @@ const Register = () => {
                 setEamil(e.target.value);
               }}
             />
+            {/* <Input
+              type="password"
+              className="form-control bg-transparent"
+              placeholder="Enter you password"
+              setValue={setPassword}
+            /> */}
             <input
               className="form-control bg-transparent"
               type="password"
@@ -96,27 +150,19 @@ const Register = () => {
             />
             <input
               className="form-control bg-transparent"
-              type="password"
-              placeholder="Enter you Portfolio Link"
+              type="text"
               value={portfolioLink}
+              placeholder="Enter you Portfolio Link"
               onChange={(e) => {
                 setPortfolioLink(e.target.value);
               }}
             />
 
-            <button
-              className="registerBtn mt-3 btn btn-success"
-              onClick={() => {
-                handleChange();
-                navigate("/confirm-auth");
-              }}
-            >
-              SEND
-            </button>
+            <button className="registerBtn mt-3 btn btn-success">SEND</button>
             <span className="mt-2 mb-3 text-center text-info">
               <Link to={"/login"}>Or Login</Link>
             </span>
-          </div>
+          </form>
         </div>
       </Layout>
     </>
