@@ -7,6 +7,7 @@ import context from "../../context/context"
 import Input from "../../components/Input/Input"
 import "./Register.scss";
 import { API } from "../../API/API";
+
 const Register = () => {
   const { register, setRegister } = useContext(context);
   const [loading, setLoading] = useState(true);
@@ -59,39 +60,16 @@ const Register = () => {
     console.log(success);
     if (success) {
       navigate("/confirm-auth");
+      
     }
   }
-  // const handleChange = async () => {
-  //   const { data } = await axios.post(
-  //     `https://startup01.onrender.com/api/users`,
-  //     { username, email, password, imageLink, portfolioLink }
-  //   );
-  //   localStorage.setItem("username", JSON.stringify(username));
-  //   localStorage.setItem("email", JSON.stringify(email));
-  //   localStorage.setItem("password", JSON.stringify(password));
-  //   localStorage.setItem("imageLink", JSON.stringify(imageLink));
-  //   localStorage.setItem("portfolioLink", JSON.stringify(portfolioLink));
-  //   console.log(data);
-  //   setRegister({ ...data });
-  //   let { success, confirmationCode } = await API.postData(register)
-  //   if (success) {
-  //     navigate("/")
-  //   }
-  // };
   return (
     <>
       <Layout title={"Register Page"}>
-        <div className="reg-container_register">
+        <div className="reg-container_register w-75 mx-auto">
           <h2 className="text-center text-white">REGISTER</h2>
-          <form action="#" onSubmit={handlerSubmit}>
-            {/* <Input
-              type="file"
-              className="form-control bg-transparent"
-              accept="image/*"
-              onChange={(e) => {
-                postDetails(e.target.files[0]);
-              }}
-            /> */}
+          <form onSubmit={handlerSubmit}  className="">
+            
             <input
               className="form-control bg-transparent"
               type="file"
@@ -100,12 +78,7 @@ const Register = () => {
                 postDetails(e.target.files[0]);
               }}
             />
-            {/* <Input
-              type="text"
-              className="form-control bg-transparent"
-              placeholder="Enter you name"
-              setValue={setUserName}
-            /> */}
+ 
             <input
               className="form-control bg-transparent"
               type="text"
@@ -116,12 +89,7 @@ const Register = () => {
                 setUserName(e.target.value);
               }}
             />
-            {/* <Input
-              type="email"
-              className="form-control bg-transparent"
-              placeholder="Enter you email"
-              setValue={setEamil}
-            /> */}
+   
             <input
               className="form-control bg-transparent"
               type="email"
@@ -132,12 +100,7 @@ const Register = () => {
                 setEamil(e.target.value);
               }}
             />
-            {/* <Input
-              type="password"
-              className="form-control bg-transparent"
-              placeholder="Enter you password"
-              setValue={setPassword}
-            /> */}
+         
             <input
               className="form-control bg-transparent"
               type="password"
@@ -159,8 +122,8 @@ const Register = () => {
             />
 
             <button className="registerBtn mt-3 btn btn-success">SEND</button>
-            <span className="mt-2 mb-3 text-center text-info">
-              <Link to={"/login"}>Or Login</Link>
+            <span className="mt-2 mx-auto d-block text-center text-info">
+              <Link to={"/login"} className="">Or Login</Link>
             </span>
           </form>
         </div>

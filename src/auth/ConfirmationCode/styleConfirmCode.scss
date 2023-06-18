@@ -1,18 +1,16 @@
-.heightWrapp{
-    min-height: 80vh;
-    max-width: 500px;
-    width: 100%;
-    margin-top: 200px;
- 
+.heightWrapp {
+  min-height: 80vh;
+  max-width: 500px;
+  width: 100%;
+  margin-top: 200px;
 }
 .confirmInputsWrapp {
-
-display: flex;
-flex-direction: row;
-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .confirmInputsWrapp div {
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -28,8 +26,7 @@ justify-content: center;
   background-color: transparent;
   color: #fff;
 
-
-  &:focus{
+  &:focus {
     outline: 2px solid rgb(39, 185, 9);
   }
 }

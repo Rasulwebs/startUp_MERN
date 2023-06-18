@@ -9,11 +9,7 @@ import link2 from "../assets/images/tailwind.svg.png";
 import link3 from "../assets/images/markdown.svg.png";
 import link4 from "../assets/images/SVG.png";
 import link5 from "../assets/images/Frame.png";
-import Register from "../auth/Regsiter/Register";
-import Login from "../auth/Login/Login";
-import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar/Sidebar";
-import Update from "../auth/Update/ForgotPassword";
 const Home = () => {
   return (
     <>
@@ -49,14 +45,6 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="links">
-              <Link to="register">
-                <a href="#">Register</a>
-              </Link>{" "}
-              <Link to="login">
-                <a href="#">Login</a>
-              </Link>
-            </div>
             <div className="checkedBoxes">
               <div className="checkedBoxes_right">
                 <div className="checkedBoxes_right-box">
