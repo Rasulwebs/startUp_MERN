@@ -2,12 +2,9 @@ import React, { useState , useContext } from "react";
 import "./Register.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
-import axios from "axios";
 import context from "../../context/context"
-import Input from "../../components/Input/Input"
 import "./Register.scss";
 import { API } from "../../API/API";
-
 const Register = () => {
   const { register, setRegister } = useContext(context);
   const [loading, setLoading] = useState(true);
@@ -60,16 +57,16 @@ const Register = () => {
     console.log(success);
     if (success) {
       navigate("/confirm-auth");
-      
     }
   }
+
   return (
     <>
       <Layout title={"Register Page"}>
-        <div className="reg-container_register w-75 mx-auto">
+        <div className="reg-container_register">
           <h2 className="text-center text-white">REGISTER</h2>
-          <form onSubmit={handlerSubmit}  className="">
-            
+          <form action="#" onSubmit={handlerSubmit}>
+
             <input
               className="form-control bg-transparent"
               type="file"
@@ -78,7 +75,7 @@ const Register = () => {
                 postDetails(e.target.files[0]);
               }}
             />
- 
+
             <input
               className="form-control bg-transparent"
               type="text"
@@ -89,7 +86,7 @@ const Register = () => {
                 setUserName(e.target.value);
               }}
             />
-   
+ 
             <input
               className="form-control bg-transparent"
               type="email"
@@ -100,7 +97,7 @@ const Register = () => {
                 setEamil(e.target.value);
               }}
             />
-         
+   
             <input
               className="form-control bg-transparent"
               type="password"
@@ -122,8 +119,8 @@ const Register = () => {
             />
 
             <button className="registerBtn mt-3 btn btn-success">SEND</button>
-            <span className="mt-2 mx-auto d-block text-center text-info">
-              <Link to={"/login"} className="">Or Login</Link>
+            <span className="mt-2 mb-3 text-center text-info">
+              <Link to={"/login"}>Or Login</Link>
             </span>
           </form>
         </div>
